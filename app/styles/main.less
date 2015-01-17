@@ -1,0 +1,111 @@
+// Configures
+@baseline: 24px;
+@size-type: rem;
+@cpl: 70rem;
+@char: 2.28;
+@ratio: 1.618;
+@xx-small-screen-column: 10;
+@x-small-screen-column: 20;
+@small-screen-column: 30;
+@medium-screen-column: 40;
+@large-screen-column: 50;
+@x-large-screen-column: 60;
+@xx-large-screen-column: 80;
+// Definitions
+@baseline-rem: unit(@baseline / 10, @size-type);
+@base-font-size: unit(@baseline / @ratio / 10, @size-type);
+@font-family: "Helvetica Neue";
+@subheading: @base-font-size * @ratio;
+@heading: @subheading * @ratio;
+@paragraph: @base-font-size;
+@small: @base-font-size / @ratio;
+@xx-small-screen: (@baseline * @xx-small-screen-column);
+@x-small-screen: (@baseline * @x-small-screen-column);
+@small-screen: (@baseline * @small-screen-column);
+@medium-screen: (@baseline * @medium-screen-column);
+@large-screen: (@baseline * @large-screen-column);
+@x-large-screen: (@baseline * @x-large-screen-column);
+@xx-large-screen: (@baseline * @xx-large-screen-column);
+@xxs-screen: ~"only screen and (min-width: @{xx-small-screen})";
+@xs-screen: ~"only screen and (min-width: @{x-small-screen})";
+@s-screen: ~"only screen and (min-width: @{small-screen})";
+@m-screen: ~"only screen and (min-width: @{medium-screen})";
+@l-screen: ~"only screen and (min-width: @{large-screen})";
+@xl-screen: ~"only screen and (min-width: @{x-large-screen})";
+@xxl-screen: ~"only screen and (min-width: @{xx-large-screen})";
+// Styles
+html {
+    background-color: cyan;
+    font-size: 20%;
+    @media @xxs-screen {
+        background-color: violet;
+        font-size: 50%;
+    }
+    @media @xs-screen {
+        background-color: pink;
+        font-size: 62.5%;
+    }
+    @media @s-screen {
+        background-color: purple;
+        font-size: 70%;
+    }
+    @media @m-screen {
+        background-color: red;
+        font-size: 80%;
+    }
+    @media @l-screen {
+        background-color: green;
+        font-size: 90%;
+    }
+    @media @xl-screen {
+        background-color: blue;
+        font-size: 100%;
+    }
+    @media @xxl-screen {
+        background-color: deeppink;
+        font-size: 100%;
+    }
+}
+body, h1, h2, p, small {
+    padding: 0;
+    margin: 0;
+}
+small {
+    display: block;
+}
+body {
+    max-width: @cpl; // * @base-font-size / @char;
+    font-family: @font-family;
+    -webkit-font-smoothing: subpixel-antialiased;
+    padding: @baseline-rem * 2;
+}
+article {
+    background-color: #bbb;
+}
+h1 {
+    background-color: #eee;
+    font-size: @heading;
+    line-height: @baseline-rem * 2;
+    margin-bottom: @baseline-rem;
+}
+h2 {
+    background-color: #F8F8F8;
+    font-size: @subheading;
+    line-height: @baseline-rem;
+    margin-top: @baseline-rem * 1;
+    margin-bottom: @baseline-rem;
+}
+p {
+    background-color: #F4F4F4;
+    font-size: @paragraph;
+    line-height: @baseline-rem;
+    margin-bottom: @baseline-rem;
+}
+small {
+    background-color: #ddd;
+    font-size: @small;
+    font-weight: bold;
+    line-height: @baseline-rem;
+    margin-top: -@baseline-rem;
+    margin-bottom: @baseline-rem;
+}

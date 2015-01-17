@@ -1,0 +1,123 @@
+html {
+	background-color: cyan;
+	font-size: 20%;
+}
+
+body,
+h1,
+h2,
+p,
+small {
+	padding: 0;
+	margin: 0;
+}
+
+small {
+	display: block;
+}
+
+body {
+	max-width: 70rem;
+	font-family: "Helvetica Neue";
+	-webkit-font-smoothing: subpixel-antialiased;
+	padding: 4.8rem;
+}
+
+article {
+	background-color: #bbb;
+}
+
+h1 {
+	background-color: #eee;
+	font-size: 3.8832rem;
+	line-height: 4.8rem;
+	margin-bottom: 2.4rem;
+}
+
+h2 {
+	background-color: #F8F8F8;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	margin-top: 2.4rem;
+	margin-bottom: 2.4rem;
+}
+
+p {
+	background-color: #F4F4F4;
+	font-size: 1.48331273rem;
+	line-height: 2.4rem;
+	margin-bottom: 2.4rem;
+}
+
+small {
+	background-color: #ddd;
+	font-size: 0.91675694rem;
+	font-weight: bold;
+	line-height: 2.4rem;
+	margin-top: -2.4rem;
+	margin-bottom: 2.4rem;
+}
+
+@media only screen and (min-width: 240px) {
+
+html {
+	background-color: violet;
+	font-size: 50%;
+}
+
+}
+
+@media only screen and (min-width: 480px) {
+
+html {
+	background-color: pink;
+	font-size: 62.5%;
+}
+
+}
+
+@media only screen and (min-width: 720px) {
+
+html {
+	background-color: purple;
+	font-size: 70%;
+}
+
+}
+
+@media only screen and (min-width: 960px) {
+
+html {
+	background-color: red;
+	font-size: 80%;
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+html {
+	background-color: green;
+	font-size: 90%;
+}
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+html {
+	background-color: blue;
+	font-size: 100%;
+}
+
+}
+
+@media only screen and (min-width: 1920px) {
+
+html {
+	background-color: deeppink;
+	font-size: 100%;
+}
+
+}
+
