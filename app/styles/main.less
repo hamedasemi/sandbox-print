@@ -109,3 +109,31 @@ small {
     margin-top: -@baseline-rem;
     margin-bottom: @baseline-rem;
 }
+
+@media print {
+    html{
+        font-size: 50%;
+    }
+    body {
+        color: #333333;
+        margin: 2cm 1.5cm;
+    }
+    h1{
+        page-break-after: avoid;
+    }
+    h2 {
+        page-break-after: avoid;
+    }
+    pre, blockquote, p {
+        page-break-inside: avoid;
+    }
+    a:after {
+        content: " [" attr(href) "] ";
+        word-wrap: break-word;
+        color: blue;
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+        color: green;
+    }
+}

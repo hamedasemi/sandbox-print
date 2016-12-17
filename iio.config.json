@@ -1,7 +1,4 @@
 {
-    "sketch": {
-        "src": "sketch"
-    },
     "browserify": {
         "src": "app",
         "dest": "www/js",
@@ -53,10 +50,6 @@
         "extensions": [],
         "transform": []
     },
-    "assets": {
-        "src": "app/assets",
-        "dest": "www/assets"
-    },
     "jasmine": {
         "src": "app",
         "type": "*[sS]pec.js",
@@ -66,7 +59,7 @@
         },
         "dependencies": []
     },
-    "server": {
+    "browsersync": {
         "dependencies": [],
         "options": {
             "logSnippet": false,
@@ -81,9 +74,5 @@
             "open": "external",
             "browser": ["google chrome"]
         }
-    },
-    "open": {
-        "editor": "Atom",
-        "dependencies": []
     }
 }
